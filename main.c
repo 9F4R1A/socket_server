@@ -14,7 +14,7 @@ int main(){
     
     struct sockaddr_in clientAddress;
     int clientAddressSize = sizeof(struct sockaddr_in);
-    int clientSocketFD = accept(serverSocketFD,&clientAddress,&clientAddressSize)
+    int clientSocketFD = accept(serverSocketFD,&clientAddress,&clientAddressSize);
 
     char* buffer[1024];
     recv(clientSocketFD,buffer,1024,0);
